@@ -1,0 +1,53 @@
+#logo {
+	@include outer-container;
+	width: calc(100% - 40px);
+	background-color: white;
+	img {
+		height: 60px;
+		margin: 30px 0px;
+	}
+}
+
+#header {
+	width: 100%;
+	display: flex;
+	display: -ms-flex;
+	display: -webkit-flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: #eeeeee;
+	padding: 30px 0px;
+	#container {
+		width: calc(100% - 30px);
+		@include outer-container;
+		h1 {
+			font-family: 'Source Sans Pro';
+			margin-left: 5px;
+			margin-bottom: 10px;
+			font-weight: 300;
+			font-size: 22pt;
+			color: $red;
+			@include media(max-width 500px) {
+				font-size: 7vw;
+			}
+		}
+		a {
+			margin: 5px 5px 0px;
+			padding: 10px;
+			background-color: white;
+			color: $red;
+			display: inline-block;
+			text-decoration: none;
+			&:hover {
+				background-color: darken(white, 2);
+			}
+			&:active {
+				background-color: darken(white, 5);
+				border-bottom: none;
+				position: relative;
+				top: 3px;
+			}
+			border-bottom: 3px solid darken(white, 10);
+		}		
+	}
+}
